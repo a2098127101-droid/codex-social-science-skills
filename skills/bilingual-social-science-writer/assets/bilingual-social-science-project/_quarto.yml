@@ -1,0 +1,19 @@
+project:
+  type: default
+  output-dir: rendered
+
+execute:
+  echo: false
+  warning: false
+  message: false
+  freeze: auto
+
+bibliography: references/references.bib
+csl: references/style.csl
+
+language:
+  zh:
+    title-block-author-single: "作者"
+    title-block-published: "日期"
+    abstract: "摘要"
+    toc-title-document: "目录"
