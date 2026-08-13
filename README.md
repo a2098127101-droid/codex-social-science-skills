@@ -1,8 +1,28 @@
 # Open Source Codex Skills for Social Science Research
 
-This release contains two Codex skills for social-science research writing and review.
+This repository contains three Codex skills for social-science research writing, review, and manuscript revision.
 
 ## Included Skills
+
+### `cross-disciplinary-social-science-manuscript-revision`
+
+Use this skill for design-aware, submission-level revision of empirical social-science manuscripts.
+
+It provides:
+
+- research-question locking and evidence-claim mapping
+- qualitative, quantitative, mixed-methods, and review design routing
+- model and variable audits for regression, panel, causal inference, CFA/SEM, LCA/LPA, multilevel, computational, and network research
+- discipline adapters for sociology, social work, public administration/public policy, education, and communication/media studies
+- logic, claim-strength, reference, defensive-writing, and submission-readiness checks
+- freeze rules and stop conditions to prevent endless re-review cycles
+- a modular update path for future research designs, discipline adapters, and reporting standards
+
+The main file is:
+
+`skills/cross-disciplinary-social-science-manuscript-revision/SKILL.md`
+
+Maintenance files live beside the skill in `CHANGELOG.md`, `ROADMAP.md`, and `modules/`.
 
 ### `social-science-reviewer`
 
@@ -42,9 +62,10 @@ It includes:
 
 ## Installation
 
-Copy the two skill folders into your Codex skills directory:
+Copy the skill folders you need into your Codex skills directory:
 
 ```powershell
+Copy-Item -Recurse .\skills\cross-disciplinary-social-science-manuscript-revision "$env:USERPROFILE\.codex\skills\"
 Copy-Item -Recurse .\skills\social-science-reviewer "$env:USERPROFILE\.codex\skills\"
 Copy-Item -Recurse .\skills\bilingual-social-science-writer "$env:USERPROFILE\.codex\skills\"
 ```
@@ -58,8 +79,13 @@ Restart Codex after installation.
 - `README.zh-CN.md`: Chinese README.
 - `OPEN_SOURCE_GUIDE.zh-CN.md`: Chinese open-source guide.
 - `SKILLS_EXPLAINED.zh-CN.md`: Chinese skill explanation.
+- `skills/cross-disciplinary-social-science-manuscript-revision/ROADMAP.md`: update roadmap for the new revision skill.
 
 ## Usage Examples
+
+```text
+Use cross-disciplinary-social-science-manuscript-revision to route this paper by research design, audit its evidence and model, freeze settled decisions, and perform a submission-level revision.
+```
 
 ```text
 Use social-science-reviewer to review this literature review and identify publication-level risks.
@@ -71,7 +97,7 @@ Use bilingual-social-science-writer to create a bilingual social-science paper p
 
 ## Academic Integrity
 
-These skills are designed to improve rigor, structure, and reproducibility. They should not be used to fabricate data, citations, interviews, findings, ethics approvals, or journal information.
+These skills are designed to improve rigor, structure, and reproducibility. They should not be used to fabricate data, citations, interviews, findings, ethics approvals, model outputs, or journal information.
 
 ## License
 

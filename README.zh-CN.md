@@ -1,8 +1,28 @@
 # 面向社会科学研究的开源 Codex Skills
 
-本发布包包含两个面向社会科学论文写作、研究设计与审稿诊断的 Codex skills。
+本仓库目前包含三个面向社会科学论文写作、研究设计、审稿诊断与投稿前深度修订的 Codex skills。
 
 ## 包含的 Skills
+
+### `cross-disciplinary-social-science-manuscript-revision`
+
+用于对经验社会科学论文进行研究设计自适应的深度修订与投稿前终校。
+
+核心能力包括：
+
+- 锁定一句话研究问题与证据—主张对应关系
+- 自动路由定性、量化、混合方法与综述类研究设计
+- 审计横截面回归、面板、准实验、CFA/SEM、LCA/LPA、多层模型、计算社会科学与社会网络模型
+- 为社会学、社会工作、公共管理/公共政策、教育学、传播学/数字媒体提供学科适配规则
+- 检查逻辑链、主张强度、跨层推断、参考文献、防御性写作与投稿完整性
+- 使用冻结区和停止修改条件，避免已经解决的问题被下一轮重复提出
+- 通过 `modules/`、`ROADMAP.md` 和更新模板持续扩展新的设计、模型和学科模块
+
+主文件：
+
+`skills/cross-disciplinary-social-science-manuscript-revision/SKILL.md`
+
+维护文件位于同一目录下的 `CHANGELOG.md`、`ROADMAP.md` 和 `modules/`。
 
 ### `social-science-reviewer`
 
@@ -42,9 +62,10 @@
 
 ## 安装方式
 
-将两个 skill 文件夹复制到 Codex skills 目录：
+将需要的 skill 文件夹复制到 Codex skills 目录：
 
 ```powershell
+Copy-Item -Recurse .\skills\cross-disciplinary-social-science-manuscript-revision "$env:USERPROFILE\.codex\skills\"
 Copy-Item -Recurse .\skills\social-science-reviewer "$env:USERPROFILE\.codex\skills\"
 Copy-Item -Recurse .\skills\bilingual-social-science-writer "$env:USERPROFILE\.codex\skills\"
 ```
@@ -58,8 +79,13 @@ Copy-Item -Recurse .\skills\bilingual-social-science-writer "$env:USERPROFILE\.c
 - `README.zh-CN.md`：中文 README。
 - `OPEN_SOURCE_GUIDE.zh-CN.md`：中文开源教程。
 - `SKILLS_EXPLAINED.zh-CN.md`：中文 skills 功能说明。
+- `skills/cross-disciplinary-social-science-manuscript-revision/ROADMAP.md`：新版深修 Skill 的后续更新路线。
 
 ## 使用示例
+
+```text
+使用 cross-disciplinary-social-science-manuscript-revision 判断这篇论文的研究设计，建立证据—主张矩阵，审计变量/模型与理论，冻结已解决问题，并完成投稿前深度修订。
+```
 
 ```text
 使用 social-science-reviewer 审查这篇文献综述，指出投稿级风险。
@@ -71,7 +97,7 @@ Copy-Item -Recurse .\skills\bilingual-social-science-writer "$env:USERPROFILE\.c
 
 ## 学术诚信
 
-这些 skills 用于提升研究严谨性、结构完整性和可复现性，不应用于伪造数据、参考文献、访谈、研究发现、伦理审批或期刊信息。
+这些 skills 用于提升研究严谨性、结构完整性和可复现性，不应用于伪造数据、参考文献、访谈、研究发现、伦理审批、模型结果或期刊信息。
 
 ## 许可证
 
